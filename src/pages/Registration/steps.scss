@@ -1,0 +1,113 @@
+@import "../../scss/style.scss";
+
+h2 {
+    color: rgba(66, 164, 76, 0.85);
+    margin-bottom: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.steps-num-div{
+    margin-bottom: 100px;
+    position: relative;
+
+    .steps-num{
+        display: flex;
+        align-items: center;
+        position: relative;
+        span{
+            background-color: #52C41A;
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        p{
+            padding-left: 10px;
+            display: inline-block;
+            position: relative;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 100%;
+            display: block;
+            min-width: 100px;
+            height: 1px;
+            background: rgba(0,0,0,.06);
+        }
+        &:last-child{
+            &::before{
+                display: none;
+            }
+        }
+    }
+    
+}
+.section-step{
+    padding: 50px 0;
+    .step-text-box{
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+        h2{
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p{
+            color: rgba(0, 0, 0, 0.37);
+            font-weight: 400;
+            font-size: 23px;
+            width: 60%;
+            margin: auto;
+        }
+    }
+}
+.progressbar-box{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+}
+.button-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    .link-btn{
+        width: auto;
+        min-width: 100px;
+    }
+}
+
+
+.steps-main-div{
+    padding: 0 150px ;
+    .step-btn.completed{
+        background-color: #52C41A !important;
+    }
+    .completed,.active{
+        border-color: #52C41A !important;
+    }
+    
+    .active.step-btn{
+        background-color: rgb(224, 224, 224) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .stepper-box{
+        padding: 24px 0 !important;
+    }
+    .col-box{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    }
+}

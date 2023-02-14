@@ -1,0 +1,108 @@
+* {
+    margin:0px;
+    padding:0px;
+    border:none;
+    outline:none;
+    @include prefix (box-sizing, border-box);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    @include prefix (text-size-adjust, none);
+}
+
+body {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:$color1;
+    font-family: 'Jost';
+    background-color: rgba(66, 164, 76, 0.10);
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    &:hover,&:focus {
+        @extend a;
+    }
+}
+button {
+    outline: 0;
+
+    &:hover, &:focus {
+        @extend button;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+    margin: 0;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+
+}
+.text-white {
+    h1, h2, h3, h4, h5, h6, strong, b, p, ul, ol, li {
+        color: $white;
+    }
+}
+.text-gray {
+    h1, h2, h3, h4, h5, h6, strong, b, p, ul, ol, li, .timer {
+        color: $color1;
+    }
+}
+p {
+    margin: 0;
+    line-height: normal;
+
+}
+
+ul,ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+svg {
+    fill: currentColor;
+    max-width: 100%;
+    vertical-align: middle;
+}
+div,aside,figure,figcaption, label {
+    margin: 0;
+}
+section,header,footer{display: inline-block;width: 100%;}
+%transition {
+    @include prefix( transition, all 0.3s ease-in-out);
+}
+
+input,textarea,select{
+    font-size: 15px;
+    @include prefix (appearance, none);
+}
+
+header{
+    @include prefix (appearance, none);
+}
+::-moz-selection {
+    background: #42A44C;
+    color: $white;
+}
+::selection {
+    background: #42A44C;
+    color: $white;
+}
+::-webkit-input-placeholder { text-align: left; color: rgba(0, 0, 0, 0.5);font-family: 'Jost'; font-weight: 400; font-size: 14px; opacity: 1;text-transform: capitalize;}
+:-moz-placeholder {  text-align: left; color: rgba(0, 0, 0, 0.5);font-family: 'Jost'; font-weight: 400; font-size: 14px; opacity: 1;text-transform: capitalize;}
+::-moz-placeholder {  text-align: left; color: rgba(0, 0, 0, 0.5);font-family: 'Jost'; font-weight: 400; font-size: 14px; opacity: 1;text-transform: capitalize;}
+:-ms-input-placeholder { text-align: left; color: rgba(0, 0, 0, 0.5);font-family: 'Jost'; font-weight: 400; font-size: 14px; opacity: 1;text-transform: capitalize;}
+.text-danger{
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+}
