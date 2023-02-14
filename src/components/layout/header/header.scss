@@ -1,0 +1,147 @@
+@import '../../../scss/style.scss';
+
+header{
+    padding: 10px 0;
+    background-color: #FFFFFF;
+    @include prefix (box-shadow,  0px 2px 8px rgba(0, 0, 0, 0.15));
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    .left-logo{
+        width: 99px;
+        height: 55px;
+        display: inline-block;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .right-header{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .icon-box{
+            margin-right: 30px;
+            position: relative;
+            span{
+                background: #FF4D4F;
+                border-radius: 10px;
+                width: 22px;
+                height: 15px;
+                display: block;
+                font-weight: 400;
+                font-size: 10px;
+                color: #FFFFFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: -5px;
+                left: 9px;
+            }
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            cursor: pointer;
+            h5{
+                margin-left: 10px;
+                color: #389E0D;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0;
+                svg{
+                    fill: #389E0D;
+                    @include prefix (transform,  rotate(180deg));
+                }
+            }
+            .logout-btn{
+                background-color: transparent;
+                color: $danger;
+                font-size: 15px;
+                font-weight: 400;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+            
+            .inner-menu-box{
+                background-color: #FFFFFF;
+                @include prefix (box-shadow,  0px 2px 8px rgba(0, 0, 0, 0.15));
+                width: 155px;
+                position: absolute;
+                top: 40px;
+                left: -75px;
+                .btn-li{
+                    padding: 10px 20px;
+                    background-color: transparent;
+                    width: 100%;
+                    height: auto;
+                    display: inline-block;
+                    text-align: left;
+                    font-size: 15px;
+                    color: #389E0D;
+                    &:hover{
+                        color: #fff;
+                        background-color: #389E0D;
+                    }
+                }
+            }
+            figure{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #389E0D;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .toggle-box{
+            display: none;
+            svg{
+                fill: #389E0D;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width: 767px){
+    header{
+        .right-header{
+            .profile {
+                h5{
+                    font-size: 13px;
+                    width: 58px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .icon-box{
+                margin-right: 25px;
+            }
+            .toggle-box{
+                display: block;
+            }
+        }
+        .left-logo {
+            width: 65px;
+            height: 40px;
+        }
+    }
+}

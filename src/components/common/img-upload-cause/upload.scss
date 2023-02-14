@@ -1,0 +1,93 @@
+@import "../../../scss/style.scss";
+
+.image-item {
+    display: flex;
+    margin: 10px 10px 10px 0;
+    height: 104px;
+    width: 104px;
+    border-radius: 5px;
+    border: 2px dotted #42A44C;
+    position: relative;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+    :nth-child(2n+1){
+        margin-right: 0;
+    }
+    &:hover .image-item__btn-wrapper{
+        display: flex;
+    }
+  }
+  .image-item__btn-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include prefix (transition, all 0.4s ease-in-out);
+    &::before{
+      content: '';
+      background-color: rgba(0,0,0,0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .img-btn{
+        font-size: 12px;
+        font-weight: 400;
+        display: inline-block;
+        border-radius: 2px;
+        margin-right: 11px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid transparent;
+        position: relative;
+        z-index: 11;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        line-height: 1;
+        svg{
+          height: 20px;
+          width: 20px;
+          color: #42A44C;
+        }
+        // &.remove{
+        //     background-color: red;
+        // }
+        &:last-child{
+            margin-right: 0;
+        }
+     }
+  }
+  .img-map-box{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .upload__image-wrapper{
+    display: flex;
+  }
+ .upload-btn{
+    margin: 10px 10px 10px 0;
+    background-color: transparent;
+    border: 2px dotted #42A44C;
+    color: #42A44C;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 35px;
+    display: inline-block;
+    font-weight: 400;
+    height: 104px;
+    width: 104px;
+    padding: 0 10px;
+    cursor: pointer;
+ }

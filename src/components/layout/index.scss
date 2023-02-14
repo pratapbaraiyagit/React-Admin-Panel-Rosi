@@ -1,0 +1,16 @@
+@import '../../scss/style.scss';
+
+.main-box{
+    //height: calc(100vh - 95px);
+}
+
+.inner-box {
+    margin: 0 20px;
+    width:100%;
+    margin: 95px 25px 25px 240px;
+    @include prefix (transition, all 0.2s ease-in-out);
+    &.open-sidebar{
+        margin: 95px 25px 25px 70px;
+
+    }
+}

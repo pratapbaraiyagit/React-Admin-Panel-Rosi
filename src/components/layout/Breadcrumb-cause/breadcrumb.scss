@@ -1,0 +1,23 @@
+@import "../../../scss/style.scss";
+
+.breadcrumb-ul{
+    li{
+        display: inline-block;
+        position: relative;
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 14px;
+        font-weight: 400;
+        &.active{
+            color: rgba(0, 0, 0, 0.85);
+        }
+        &:after{
+            content: '/';
+            margin: 0 10px;
+        }
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+}
