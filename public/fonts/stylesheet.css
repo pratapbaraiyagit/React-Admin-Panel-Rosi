@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Regular.eot');
+    src: url('Jost-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Jost-Regular.woff2') format('woff2'),
+        url('Jost-Regular.woff') format('woff'),
+        url('Jost-Regular.ttf') format('truetype'),
+        url('Jost-Regular.svg#Jost-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Bold.eot');
+    src: url('Jost-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Jost-Bold.woff2') format('woff2'),
+        url('Jost-Bold.woff') format('woff'),
+        url('Jost-Bold.ttf') format('truetype'),
+        url('Jost-Bold.svg#Jost-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Bold.eot');
+    src: url('Lora-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Lora-Bold.woff2') format('woff2'),
+        url('Lora-Bold.woff') format('woff'),
+        url('Lora-Bold.ttf') format('truetype'),
+        url('Lora-Bold.svg#Lora-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
